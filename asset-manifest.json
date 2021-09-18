@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/nomad_react_clone/static/css/main.562e8ae9.chunk.css",
+    "main.js": "/nomad_react_clone/static/js/main.4a1ee617.chunk.js",
+    "main.js.map": "/nomad_react_clone/static/js/main.4a1ee617.chunk.js.map",
+    "runtime-main.js": "/nomad_react_clone/static/js/runtime-main.434ac92e.js",
+    "runtime-main.js.map": "/nomad_react_clone/static/js/runtime-main.434ac92e.js.map",
+    "static/js/2.0f52410f.chunk.js": "/nomad_react_clone/static/js/2.0f52410f.chunk.js",
+    "static/js/2.0f52410f.chunk.js.map": "/nomad_react_clone/static/js/2.0f52410f.chunk.js.map",
+    "index.html": "/nomad_react_clone/index.html",
+    "static/css/main.562e8ae9.chunk.css.map": "/nomad_react_clone/static/css/main.562e8ae9.chunk.css.map",
+    "static/js/2.0f52410f.chunk.js.LICENSE.txt": "/nomad_react_clone/static/js/2.0f52410f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.434ac92e.js",
+    "static/js/2.0f52410f.chunk.js",
+    "static/css/main.562e8ae9.chunk.css",
+    "static/js/main.4a1ee617.chunk.js"
+  ]
+}
