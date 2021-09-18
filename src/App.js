@@ -19,9 +19,21 @@ class App extends React.Component {
    this.setState( { count : this.state.count - 1 } );   // 위에 current를 사용하는 것과 같은 식이지만 위에 방법은 좀 더 권장합니다.
 };
 
+  componentDidMount() {
+    console.log("component rendered");
+    
+  }
+  componentDidUpdate () {
+  console.log("I just updated")
 
+  }
+  componentWillUnmount() {
+    console.log("Goodbye")
+  }
 
   render() {
+    console.log("im rendering")
+
       return (
         <div>
             <h1>The number is  {this.state.count}</h1>
