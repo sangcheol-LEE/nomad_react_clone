@@ -1,52 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types"
-import { throwStatement } from "@babel/types";
-import { CompatSource } from "webpack-sources";
+import axios from "axios";
 
 class App extends React.Component {
-
   state = {
-    count : 0
-
+    isLoading: true,
+    movies: [] // 후에 많은 요소들로 채울 예정.
   };
 
-  add =() => {
-   this.setState(current => ( { count : current.count + 1 }));
-
-  };
-
-  minus =() => {
-   this.setState( { count : this.state.count - 1 } );   // 위에 current를 사용하는 것과 같은 식이지만 위에 방법은 좀 더 권장합니다.
-};
+  getMovies = async () => {                                                         // async await 을 하는 것은 우리가 기본적으로 JS에게 getMovies 함수에게  
+    const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");    // 조금 시간이 필요하고 우리는 그걸 기다려야한다 라는 것을 의미합니다.
+  }
 
   componentDidMount() {
-    console.log("component rendered");
-    
-  }
-  componentDidUpdate () {
-  console.log("I just updated")
-
-  }
-  componentWillUnmount() {
-    console.log("Goodbye")
+    this.getMovies();    
   }
 
   render() {
-    console.log("im rendering")
-
-      return (
-        <div>
-            <h1>The number is  {this.state.count}</h1>
-            <button onClick={ this.add } >Add</button>
-            <button onClick={  this.minus }>Minus</button>
-
-        </div>
-
+    const { isLoading } = this.state;
+     return  <div> { isLoading ? "Loading..." : "We are ready" } </div>
         
-      )
-  }
-
-
+      
+    }
 }
 
 
